@@ -1,0 +1,257 @@
+export const menu = [
+  {
+    name: "Ramen",
+    types: [
+      {
+        name: "Shoyu Ramen",
+        price: 12,
+        ingredients: [
+          { ingredient: "Soy Sauce", cost: 1 },
+          { ingredient: "Noodles", cost: 2 },
+          { ingredient: "Chicken", cost: 3 },
+        ],
+      },
+      {
+        name: "Miso Ramen",
+        price: 14,
+        ingredients: [
+          { ingredient: "Miso Paste", cost: 1.5 },
+          { ingredient: "Noodles", cost: 2 },
+          { ingredient: "Pork", cost: 3.5 },
+        ],
+      },
+      {
+        name: "Tonkotsu Ramen",
+        price: 15,
+        ingredients: [
+          { ingredient: "Pork Bone Broth", cost: 2 },
+          { ingredient: "Noodles", cost: 2 },
+          { ingredient: "Egg", cost: 1 },
+        ],
+      },
+    ],
+  },
+  {
+    name: "Pizza",
+    types: [
+      {
+        name: "Margherita",
+        price: 10,
+        ingredients: [
+          { ingredient: "Tomato Sauce", cost: 1 },
+          { ingredient: "Mozzarella", cost: 2 },
+          { ingredient: "Basil", cost: 0.5 },
+          { ingredient: "Olive Oil", cost: 0.2 },
+          { ingredient: "Salt", cost: 0.1 },
+          { ingredient: "Pepper", cost: 0.1 },
+          { ingredient: "Garlic", cost: 0.2 },
+          { ingredient: "Oregano", cost: 0.2 },
+          { ingredient: "Parmesan", cost: 0.5 },
+          { ingredient: "Yeast", cost: 0.1 },
+        ],
+      },
+      {
+        name: "Pepperoni",
+        price: 12,
+        ingredients: [
+          { ingredient: "Tomato Sauce", cost: 1 },
+          { ingredient: "Mozzarella", cost: 2 },
+          { ingredient: "Pepperoni", cost: 2.5 },
+          { ingredient: "Olive Oil", cost: 0.2 },
+          { ingredient: "Salt", cost: 0.1 },
+          { ingredient: "Pepper", cost: 0.1 },
+          { ingredient: "Garlic", cost: 0.2 },
+          { ingredient: "Oregano", cost: 0.2 },
+          { ingredient: "Parmesan", cost: 0.5 },
+          { ingredient: "Yeast", cost: 0.1 },
+        ],
+      },
+      {
+        name: "BBQ Chicken",
+        price: 14,
+        ingredients: [
+          { ingredient: "BBQ Sauce", cost: 1.5 },
+          { ingredient: "Chicken", cost: 3 },
+          { ingredient: "Onions", cost: 0.5 },
+          { ingredient: "Mozzarella", cost: 2 },
+          { ingredient: "Cilantro", cost: 0.2 },
+          { ingredient: "Salt", cost: 0.1 },
+          { ingredient: "Pepper", cost: 0.1 },
+          { ingredient: "Garlic", cost: 0.2 },
+          { ingredient: "Oregano", cost: 0.2 },
+          { ingredient: "Parmesan", cost: 0.5 },
+        ],
+      },
+    ],
+  },
+  {
+    name: "Burger",
+    types: [
+      {
+        name: "Cheeseburger",
+        price: 8,
+        ingredients: [
+          { ingredient: "Beef Patty", cost: 3 },
+          { ingredient: "Cheese", cost: 1 },
+          { ingredient: "Lettuce", cost: 0.5 },
+          { ingredient: "Tomato", cost: 0.5 },
+          { ingredient: "Pickles", cost: 0.2 },
+          { ingredient: "Onions", cost: 0.2 },
+          { ingredient: "Ketchup", cost: 0.1 },
+          { ingredient: "Mustard", cost: 0.1 },
+          { ingredient: "Bun", cost: 1 },
+          { ingredient: "Mayo", cost: 0.2 },
+        ],
+      },
+      {
+        name: "Bacon Burger",
+        price: 10,
+        ingredients: [
+          { ingredient: "Beef Patty", cost: 3 },
+          { ingredient: "Bacon", cost: 2 },
+          { ingredient: "Cheese", cost: 1 },
+          { ingredient: "Lettuce", cost: 0.5 },
+          { ingredient: "Tomato", cost: 0.5 },
+          { ingredient: "Pickles", cost: 0.2 },
+          { ingredient: "Onions", cost: 0.2 },
+          { ingredient: "Ketchup", cost: 0.1 },
+          { ingredient: "Mustard", cost: 0.1 },
+          { ingredient: "Bun", cost: 1 },
+        ],
+      },
+      {
+        name: "Veggie Burger",
+        price: 7,
+        ingredients: [
+          { ingredient: "Veggie Patty", cost: 2.5 },
+          { ingredient: "Lettuce", cost: 0.5 },
+          { ingredient: "Tomato", cost: 0.5 },
+          { ingredient: "Pickles", cost: 0.2 },
+          { ingredient: "Onions", cost: 0.2 },
+          { ingredient: "Ketchup", cost: 0.1 },
+          { ingredient: "Mustard", cost: 0.1 },
+          { ingredient: "Bun", cost: 1 },
+          { ingredient: "Avocado", cost: 1 },
+          { ingredient: "Mayo", cost: 0.2 },
+        ],
+      },
+    ],
+  },
+  {
+    name: "French fries",
+    types: [
+      {
+        name: "Regular Fries",
+        price: 3,
+        ingredients: [
+          { ingredient: "Potatoes", cost: 1 },
+          { ingredient: "Salt", cost: 0.1 },
+          { ingredient: "Oil", cost: 0.2 },
+        ],
+      },
+      {
+        name: "Cheese Fries",
+        price: 4,
+        ingredients: [
+          { ingredient: "Potatoes", cost: 1 },
+          { ingredient: "Cheese Sauce", cost: 1 },
+          { ingredient: "Salt", cost: 0.1 },
+        ],
+      },
+      {
+        name: "Chili Fries",
+        price: 5,
+        ingredients: [
+          { ingredient: "Potatoes", cost: 1 },
+          { ingredient: "Chili", cost: 2 },
+          { ingredient: "Cheese", cost: 1 },
+        ],
+      },
+    ],
+  },
+  {
+    name: "Fast food",
+    types: [
+      {
+        name: "Chicken Nuggets",
+        price: 6,
+        ingredients: [
+          { ingredient: "Chicken", cost: 3 },
+          { ingredient: "Breading", cost: 1 },
+          { ingredient: "Oil", cost: 0.5 },
+          { ingredient: "Salt", cost: 0.1 },
+          { ingredient: "Pepper", cost: 0.1 },
+          { ingredient: "Garlic Powder", cost: 0.1 },
+          { ingredient: "Onion Powder", cost: 0.1 },
+          { ingredient: "Paprika", cost: 0.1 },
+          { ingredient: "Egg", cost: 0.2 },
+          { ingredient: "Milk", cost: 0.2 },
+        ],
+      },
+      {
+        name: "Hot Dog",
+        price: 5,
+        ingredients: [
+          { ingredient: "Sausage", cost: 2 },
+          { ingredient: "Bun", cost: 1 },
+          { ingredient: "Ketchup", cost: 0.5 },
+          { ingredient: "Mustard", cost: 0.5 },
+          { ingredient: "Onions", cost: 0.2 },
+          { ingredient: "Pickles", cost: 0.2 },
+          { ingredient: "Relish", cost: 0.2 },
+          { ingredient: "Cheese", cost: 0.5 },
+          { ingredient: "Chili", cost: 1 },
+          { ingredient: "Jalapenos", cost: 0.2 },
+        ],
+      },
+      {
+        name: "Onion Rings",
+        price: 4,
+        ingredients: [
+          { ingredient: "Onions", cost: 1 },
+          { ingredient: "Breading", cost: 1 },
+          { ingredient: "Oil", cost: 0.5 },
+          { ingredient: "Salt", cost: 0.1 },
+          { ingredient: "Pepper", cost: 0.1 },
+          { ingredient: "Garlic Powder", cost: 0.1 },
+          { ingredient: "Onion Powder", cost: 0.1 },
+          { ingredient: "Paprika", cost: 0.1 },
+          { ingredient: "Egg", cost: 0.2 },
+          { ingredient: "Milk", cost: 0.2 },
+        ],
+      },
+    ],
+  },
+  {
+    name: "Soft drinks",
+    types: [
+      {
+        name: "Cola",
+        price: 2,
+        ingredients: [
+          { ingredient: "Carbonated Water", cost: 0.5 },
+          { ingredient: "Sugar", cost: 0.5 },
+          { ingredient: "Caffeine", cost: 0.2 },
+        ],
+      },
+      {
+        name: "Lemonade",
+        price: 2.5,
+        ingredients: [
+          { ingredient: "Lemon Juice", cost: 1 },
+          { ingredient: "Sugar", cost: 0.5 },
+          { ingredient: "Water", cost: 0.1 },
+        ],
+      },
+      {
+        name: "Iced Tea",
+        price: 3,
+        ingredients: [
+          { ingredient: "Tea", cost: 1 },
+          { ingredient: "Sugar", cost: 0.5 },
+          { ingredient: "Lemon", cost: 0.5 },
+        ],
+      },
+    ],
+  },
+];
