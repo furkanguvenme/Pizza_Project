@@ -1,6 +1,67 @@
+import styled from "styled-components";
 import "./Home.css";
+import MenuCard from "./HomeComponents/MenuCard";
+import { useState } from "react";
+import Footer from "./SuccessComponents/Footer";
 
-export default function Home() {
+const FoodButon = styled.button`
+  width: 187px;
+  height: 60px;
+  border: none;
+  border-radius: 30px;
+  background-color: white;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+  }
+`;
+
+const FoodDiv = styled.div`
+  display: flex;
+  width: 1272px;
+  justify-content: center;
+  gap: 30px;
+`;
+
+const CardSection = styled.section`
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding: 50px 0 125px 0;
+  background-color: #faf7f2;
+`;
+
+const CardDiv = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 1272px;
+  gap: 24px;
+`;
+
+export default function Home({ menuItems }) {
+  const [selectedButton, setSelectedButton] = useState(
+    menuItems.find((item) => item.name === "Ramen").types
+  );
+
+  function handleClick(event) {
+    // event.currentTarget ile tıklanan butonu al
+    const buttonName = event.currentTarget.name;
+    const selectedMenuItem = menuItems.find((item) => item.name === buttonName);
+
+    if (selectedMenuItem) {
+      setSelectedButton(selectedMenuItem.types);
+    }
+  }
+
+  console.log(menuItems);
+  console.log(selectedButton);
+
   return (
     <>
       <header className="homeHeader">
@@ -233,6 +294,91 @@ export default function Home() {
           </div>
         </div>
       </article>
+      <main className="homeMain">
+        <p
+          style={{
+            fontFamily: "Satisfy",
+            color: "#CE2829",
+            fontSize: "28px",
+            marginBottom: "0px",
+          }}
+        >
+          en çok paketlenen menüler
+        </p>
+        <p
+          style={{
+            fontFamily: "Barlow",
+            color: "black",
+            fontSize: "32px",
+            fontWeight: "600",
+          }}
+        >
+          Acıktıran Kodlara Doyuran Lezzetler
+        </p>
+        <FoodDiv>
+          <FoodButon name="Ramen" onClick={handleClick}>
+            <img
+              style={{ paddingRight: "10px" }}
+              src="./Assets/mile2-aseets/icons/1.svg"
+            />
+            Ramen
+          </FoodButon>
+          <FoodButon name="Pizza" onClick={handleClick}>
+            <img
+              style={{ paddingRight: "10px" }}
+              src="./Assets/mile2-aseets/icons/2.svg"
+            />
+            Pizza
+          </FoodButon>
+          <FoodButon name="Burger" onClick={handleClick}>
+            <img
+              style={{ paddingRight: "10px" }}
+              src="./Assets/mile2-aseets/icons/3.svg"
+            />
+            Burger
+          </FoodButon>
+          <FoodButon name="French fries" onClick={handleClick}>
+            <img
+              style={{ paddingRight: "10px" }}
+              src="./Assets/mile2-aseets/icons/4.svg"
+            />
+            French fries
+          </FoodButon>
+          <FoodButon name="Fast food" onClick={handleClick}>
+            <img
+              style={{ paddingRight: "10px" }}
+              src="./Assets/mile2-aseets/icons/5.svg"
+            />
+            Fast food
+          </FoodButon>
+          <FoodButon name="Soft drinks" onClick={handleClick}>
+            <img
+              style={{ paddingRight: "10px" }}
+              src="./Assets/mile2-aseets/icons/6.svg"
+            />
+            Soft drikns
+          </FoodButon>
+        </FoodDiv>
+      </main>
+      {
+        <CardSection>
+          <CardDiv>
+            {selectedButton.map((item) => (
+              <MenuCard
+                key={item.id}
+                id={item.id}
+                raiting={item.rating}
+                name={item.name}
+                price={item.price}
+                picture={item.picture}
+              />
+            ))}
+          </CardDiv>
+        </CardSection>
+      }
+      <footer>
+        <Footer />
+      </footer>
     </>
   );
 }

@@ -3,6 +3,8 @@ export const menu = [
     name: "Ramen",
     types: [
       {
+        id: 202,
+        rating: 4.6,
         name: "Shoyu Ramen",
         price: 12,
         picture:
@@ -14,6 +16,8 @@ export const menu = [
         ],
       },
       {
+        id: 203,
+        rating: 4.7,
         name: "Miso Ramen",
         price: 14,
         picture: "https://a.ppy.sh/12197887_1571644376.jpeg",
@@ -24,6 +28,8 @@ export const menu = [
         ],
       },
       {
+        id: 204,
+        rating: 4.8,
         name: "Tonkotsu Ramen",
         price: 15,
         picture:
@@ -40,6 +46,8 @@ export const menu = [
     name: "Pizza",
     types: [
       {
+        id: 206,
+        rating: 4.5,
         name: "Margherita",
         price: 10,
         picture: "https://cs8.pikabu.ru/avatars/2607/x2607423-868906487.png",
@@ -57,6 +65,8 @@ export const menu = [
         ],
       },
       {
+        id: 207,
+        rating: 4.6,
         name: "Pepperoni",
         price: 12,
         picture: "https://cs8.pikabu.ru/avatars/2607/x2607423-868906487.png",
@@ -74,6 +84,8 @@ export const menu = [
         ],
       },
       {
+        id: 208,
+        rating: 4.7,
         name: "BBQ Chicken",
         price: 14,
         picture:
@@ -97,6 +109,8 @@ export const menu = [
     name: "Burger",
     types: [
       {
+        id: 210,
+        rating: 4.9,
         name: "Cheeseburger",
         price: 8,
         picture:
@@ -115,6 +129,8 @@ export const menu = [
         ],
       },
       {
+        id: 211,
+        rating: 4.5,
         name: "Bacon Burger",
         price: 10,
         picture:
@@ -133,6 +149,8 @@ export const menu = [
         ],
       },
       {
+        id: 212,
+        rating: 4.6,
         name: "Veggie Burger",
         price: 7,
         picture:
@@ -156,6 +174,8 @@ export const menu = [
     name: "French fries",
     types: [
       {
+        id: 214,
+        rating: 4.8,
         name: "Regular Fries",
         price: 3,
         picture:
@@ -167,6 +187,8 @@ export const menu = [
         ],
       },
       {
+        id: 215,
+        rating: 4.9,
         name: "Cheese Fries",
         price: 4,
         picture:
@@ -175,17 +197,21 @@ export const menu = [
           { ingredient: "Potatoes", cost: 1 },
           { ingredient: "Cheese Sauce", cost: 1 },
           { ingredient: "Salt", cost: 0.1 },
+          { ingredient: "Oil", cost: 0.2 },
         ],
       },
       {
-        name: "Chili Fries",
-        price: 5,
+        id: 216,
+        rating: 4.7,
+        name: "Curly Fries",
+        price: 3.5,
         picture:
-          "https://yandex-images.clstorage.net/5AaPN2154/5e1bb70bzD/l0Hc8LCN3deRIMg011dsCwnhnR9yR6ZDLXVm00_agEYekkJJ2THbuwbmPMiZCIw3BE92Hhry_ggyql3z48yjm9YUmryrk5LdkCDLOd5MZQwC6ZIXdlOhQXUiBLs8qvYpZ6M-P6JLx7wJ4TuF1g7UaEwNPXIht4ZYTp8SiKSpws6SSP78lrSl4IMGgzrETUArJ7e_IFIami0nRD-hOZrhMGGGERGOUeaeK9EKsYoV7kA0ISRZJN6SXm2FJJmSu_vjl3LA3LKRgf2RPoQm_HJrASWmvg5wO4kuK0Qfiy2AwBJCnQ4Mu0jNsAnzNLO_AMFBIRQYTBj1hHZRgBCouZ3pwaBZxdqvqrfTnTuSBOJYWyI-uYkPYyyaLAxGFLERqNMhbYAdO6FP75EzwjyOjQvudDQQKU8qzYBPUokYj7OH-_C4SMnbiZC-4I82qC7RSH4eKIqlPEwhqQQSax22PILGN0mfMSizT_OuPtU7qqEYw3cEMAhpMMSxTUK7CoynhsvVinjd-5SQo9WABrQjzHF4Lzu9kS5yB4A_DHcfqhyz2Q5vsC0Vo2nclx7COrWqL9lVEh8ceDf4rlJorgWPvafx06hx7euNkqrYugelNP5NZhoyorc5ZCuoHxBpEqUNnfUma70cHZF_7aw3ww6TmiHIVA8jO2854J5TVrUZtoGs6seUVeT8tq6w95cUtgzfcEUKFaKxGFAMiTYIQDyXEYbVFG-1JTWSUfucKfUmmpshzU4nFwJnO_-VanWGBruciOvYjmnt4ZKNneqvHIsj4GtBKzaMtw5lK7kKPV4eoDGv3DxRtxUXpG_GrC7UFIWvJ-NvNj4MYDzNpldBjSWcpo7-77RS49uPlILymByALMdQRz4XhqMNSAalGQNyKJMEpeUCR50xH6JQ8posyDOOkzvDShoKCFw38JdfQpU4i7iL3NCGSMH0jpSAy7chozrxf2U4F4KyLHUYmzkPYTKBO6E",
+          "https://bigoven-res.cloudinary.com/image/upload/t_recipe-256/oven-roasted-sweet-potato-frie-d08f33.jpg",
         ingredients: [
           { ingredient: "Potatoes", cost: 1 },
-          { ingredient: "Chili", cost: 2 },
-          { ingredient: "Cheese", cost: 1 },
+          { ingredient: "Salt", cost: 0.1 },
+          { ingredient: "Oil", cost: 0.2 },
+          { ingredient: "Spices", cost: 0.2 },
         ],
       },
     ],
@@ -194,10 +220,12 @@ export const menu = [
     name: "Fast food",
     types: [
       {
+        id: 217,
+        rating: 4.8,
         name: "Chicken Nuggets",
         price: 6,
         picture:
-          "https://avatars.mds.yandex.net/i?id=c3c3a14877114f06452906a19380c38e326287be-4120950-images-thumbs&n=13",
+          "https://cdn.discordapp.com/icons/666859564892946482/700ac0570b1b3e9568b4fb82ec0d997e.jpg?size=256",
         ingredients: [
           { ingredient: "Chicken", cost: 3 },
           { ingredient: "Breading", cost: 1 },
@@ -212,6 +240,8 @@ export const menu = [
         ],
       },
       {
+        id: 218,
+        rating: 4.9,
         name: "Hot Dog",
         price: 5,
         picture:
@@ -230,10 +260,12 @@ export const menu = [
         ],
       },
       {
+        id: 219,
+        rating: 4.7,
         name: "Onion Rings",
         price: 4,
         picture:
-          "https://4.bp.blogspot.com/-4vDlOk1BHa4/WPg6vYpUlKI/AAAAAAAABPk/QQm8OiXJ9dQVbYmpUaYxHw0nooh8tl_HACLcB/w256-h256-p-k-no-nu/Resep%2BMasakan%2BOnion%2BRing%2Bmudah.jpg",
+          "https://bigoven-res.cloudinary.com/image/upload/t_recipe-256/cheese-stuffed-onion-rings-1680211.jpg",
         ingredients: [
           { ingredient: "Onions", cost: 1 },
           { ingredient: "Breading", cost: 1 },
@@ -253,6 +285,8 @@ export const menu = [
     name: "Soft drinks",
     types: [
       {
+        id: 220,
+        rating: 4.4,
         name: "Cola",
         price: 2,
         picture: "https://www.one-liners.nl/wp-content/uploads/2014/07/62.png",
@@ -263,10 +297,12 @@ export const menu = [
         ],
       },
       {
+        id: 221,
+        rating: 4.7,
         name: "Lemonade",
         price: 2.5,
         picture:
-          "https://static.insales-cdn.com/r/cquqDPRtRvQ/rs:fill-down:256:0:1/q:100/plain/images/collections/1/6171/93419547/large_%D1%81%D0%B8%D1%80%D0%BE%D0%BF1_%D1%81%D0%B6%D0%B0%D1%82.jpg",
+          "http://boyaks.com.tr/en/img/urunler/icecek-grubu/limonata.jpg",
         ingredients: [
           { ingredient: "Lemon Juice", cost: 1 },
           { ingredient: "Sugar", cost: 0.5 },
@@ -274,6 +310,8 @@ export const menu = [
         ],
       },
       {
+        id: 222,
+        rating: 4.8,
         name: "Iced Tea",
         price: 3,
         picture:

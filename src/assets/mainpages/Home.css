@@ -75,3 +75,11 @@
     width: max-content;
     margin: 50px 0 0 50px;
 }
+
+.homeMain {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FAF7F2;
+}
