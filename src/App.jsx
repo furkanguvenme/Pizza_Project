@@ -9,16 +9,29 @@ import { menu } from "./menu";
 function App() {
   const [menuItems, setMenuItems] = useState(menu);
   const [hesap, setHesap] = useState(0);
+  const [selectedButton, setSelectedButton] = useState(
+    menuItems.find((item) => item.name === "Ramen").types
+  );
+  const [clicked, setClicked] = useState("");
   return (
     <Switch>
       <Route path="/home">
-        <Home menuItems={menuItems} />
+        <Home
+          menuItems={menuItems}
+          selectedButton={selectedButton}
+          setSelectedButton={setSelectedButton}
+          setClicked={setClicked}
+        />
       </Route>
-      <Route path="/order" setHesap={setHesap}>
-        <Order />
+      <Route path="/order">
+        <Order
+          setHesap={setHesap}
+          selectedButton={selectedButton}
+          clicked={clicked}
+        />
       </Route>
-      <Route path="/success" hesap={hesap}>
-        <Success />
+      <Route path="/success">
+        <Success hesap={hesap} />
       </Route>
     </Switch>
   );

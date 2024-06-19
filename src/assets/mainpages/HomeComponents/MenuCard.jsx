@@ -1,6 +1,8 @@
+import { useHistory } from "react-router-dom";
 import styled from "styled-components";
+import Order from "../Order";
 
-const MenuCardDiv = styled.div`
+const MenuCardDiv = styled.button`
   width: 408px;
   height: min-content;
   display: flex;
@@ -9,6 +11,7 @@ const MenuCardDiv = styled.div`
   align-items: center;
   background-color: white;
   border-radius: 15px;
+  border: none;
 `;
 
 const MenuCardImg = styled.img`
@@ -44,9 +47,16 @@ const MenuPrice = styled.p`
   font-size: 20px;
 `;
 
-export default function MenuCard({ id, raiting, name, price, picture }) {
+export default function MenuCard({
+  id,
+  raiting,
+  name,
+  price,
+  picture,
+  cardClick,
+}) {
   return (
-    <MenuCardDiv>
+    <MenuCardDiv name={name} onClick={cardClick}>
       <MenuCardImg src={picture} />
       <MenuCardName>{name}</MenuCardName>
       <MenuDiv>

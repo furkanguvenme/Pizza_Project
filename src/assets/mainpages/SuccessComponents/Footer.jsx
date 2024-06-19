@@ -131,7 +131,7 @@ export default function Footer() {
         </div>
       </FooterTop>
       <Cizgi />
-      <FooterBottom style={{ backgroundColor: "black" }}>
+      <FooterBottom style={{ backgroundColor: "black", paddingTop: "15px" }}>
         <p>© 2023 Teknolojik Yemekler</p>
         <p>
           <FaSquareXTwitter style={{ scale: "1.5" }} />

@@ -3,6 +3,8 @@ import "./Home.css";
 import MenuCard from "./HomeComponents/MenuCard";
 import { useState } from "react";
 import Footer from "./SuccessComponents/Footer";
+import Order from "./Order";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 const FoodButon = styled.button`
   width: 187px;
@@ -44,16 +46,23 @@ const CardDiv = styled.div`
   gap: 24px;
 `;
 
-export default function Home({ menuItems }) {
-  const [selectedButton, setSelectedButton] = useState(
-    menuItems.find((item) => item.name === "Ramen").types
-  );
+export default function Home({
+  menuItems,
+  selectedButton,
+  setSelectedButton,
+  setClicked,
+}) {
+  let history = useHistory();
+
+  function cardClick(event) {
+    history.push("/order");
+    setClicked(event.currentTarget.name);
+  }
 
   function handleClick(event) {
     // event.currentTarget ile tıklanan butonu al
     const buttonName = event.currentTarget.name;
     const selectedMenuItem = menuItems.find((item) => item.name === buttonName);
-
     if (selectedMenuItem) {
       setSelectedButton(selectedMenuItem.types);
     }
@@ -115,42 +124,54 @@ export default function Home({ menuItems }) {
         </div>
       </header>
       <article className="homeArticle">
-        <p style={{ display: "flex", alignItems: "center" }}>
+        <p
+          style={{ display: "flex", alignItems: "center", paddingTop: "10px" }}
+        >
           <img
             style={{ paddingRight: "10px" }}
             src="./Assets/mile2-aseets/icons/1.svg"
           />
           YENİ! Kore
         </p>
-        <p style={{ display: "flex", alignItems: "center" }}>
+        <p
+          style={{ display: "flex", alignItems: "center", paddingTop: "10px" }}
+        >
           <img
             style={{ paddingRight: "10px" }}
             src="./Assets/mile2-aseets/icons/2.svg"
           />
           Pizza
         </p>
-        <p style={{ display: "flex", alignItems: "center" }}>
+        <p
+          style={{ display: "flex", alignItems: "center", paddingTop: "10px" }}
+        >
           <img
             style={{ paddingRight: "10px" }}
             src="./Assets/mile2-aseets/icons/3.svg"
           />
           Burger
         </p>
-        <p style={{ display: "flex", alignItems: "center" }}>
+        <p
+          style={{ display: "flex", alignItems: "center", paddingTop: "10px" }}
+        >
           <img
             style={{ paddingRight: "10px" }}
             src="./Assets/mile2-aseets/icons/4.svg"
           />
           Kızartmalar
         </p>
-        <p style={{ display: "flex", alignItems: "center" }}>
+        <p
+          style={{ display: "flex", alignItems: "center", paddingTop: "10px" }}
+        >
           <img
             style={{ paddingRight: "10px" }}
             src="./Assets/mile2-aseets/icons/5.svg"
           />
           Fast food
         </p>
-        <p style={{ display: "flex", alignItems: "center" }}>
+        <p
+          style={{ display: "flex", alignItems: "center", paddingTop: "10px" }}
+        >
           <img
             style={{ paddingRight: "10px" }}
             src="./Assets/mile2-aseets/icons/6.svg"
@@ -262,7 +283,7 @@ export default function Home({ menuItems }) {
                     margin: "0",
                   }}
                 >
-                  <span style={{ color: "#CE2829" }}>Çok</span> hızlı
+                  <span style={{ color: "#CE2829" }}>Çoooook</span> hızlı
                 </p>
                 <p
                   style={{
@@ -371,6 +392,8 @@ export default function Home({ menuItems }) {
                 name={item.name}
                 price={item.price}
                 picture={item.picture}
+                selectedButton={selectedButton}
+                cardClick={cardClick}
               />
             ))}
           </CardDiv>
