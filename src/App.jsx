@@ -8,7 +8,15 @@ import { menu } from "./menu";
 
 function App() {
   const [menuItems, setMenuItems] = useState(menu);
+  const [order, setOrder] = useState({});
   const [hesap, setHesap] = useState(0);
+  const [secim, setSecim] = useState(0);
+  const [siparis, setSiparis] = useState({
+    size: "",
+    weight: "",
+    extra: [],
+    piece: 1,
+  });
   const [selectedButton, setSelectedButton] = useState(
     menuItems.find((item) => item.name === "Ramen").types
   );
@@ -25,13 +33,20 @@ function App() {
       </Route>
       <Route path="/order">
         <Order
+          order={order}
+          setOrder={setOrder}
+          hesap={hesap}
           setHesap={setHesap}
+          secim={secim}
+          setSecim={setSecim}
+          siparis={siparis}
+          setSiparis={setSiparis}
           selectedButton={selectedButton}
           clicked={clicked}
         />
       </Route>
       <Route path="/success">
-        <Success hesap={hesap} />
+        <Success order={order} hesap={hesap} secim={secim} siparis={siparis} />
       </Route>
     </Switch>
   );

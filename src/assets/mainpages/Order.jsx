@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Form, FormGroup, Input, Label } from "reactstrap";
 import Footer from "./SuccessComponents/Footer";
 import Checkbox from "./OrderComponents/Checkbox";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 const OrderHeader = styled.header`
   display: flex;
@@ -133,17 +134,70 @@ const PieceButon = styled.button`
   }
 `;
 
-export default function Order({ clicked, setHesap, selectedButton }) {
-  const [order, setOrder] = useState({});
+export default function Order({
+  clicked,
+  hesap,
+  setHesap,
+  order,
+  setOrder,
+  secim,
+  setSecim,
+  siparis,
+  setSiparis,
+  selectedButton,
+}) {
   useEffect(() => {
     const foundItem = selectedButton.find((item) => item.name === clicked);
     if (foundItem) {
       setOrder(foundItem);
     }
+    setHesap((hesap) => hesap + foundItem.price);
   }, []);
-  console.log(selectedButton);
-  console.log(clicked);
-  console.log(order);
+
+  let newExtra;
+
+  function changeHandler(event) {
+    if (event.target.type === "radio" || event.target.name === "weight") {
+      setSiparis({ ...siparis, [event.target.name]: event.target.value });
+    }
+    if (event.target.type === "checkbox") {
+      const oldExtra = siparis[event.target.name];
+      const extraCost = parseFloat(event.target.getAttribute("data-cost"));
+
+      if (oldExtra.includes(event.target.value)) {
+        newExtra = oldExtra.filter((v) => v !== event.target.value);
+        setSecim((secim) => secim - extraCost);
+        setHesap((hesap) => hesap - secim);
+      } else {
+        newExtra = [...oldExtra, event.target.value];
+        setSecim((secim) => secim + extraCost);
+        setHesap((hesap) => hesap + secim);
+      }
+      setSiparis({ ...siparis, [event.target.name]: newExtra });
+    }
+  }
+
+  function clickPiece(event) {
+    if (event.target.value === "+") {
+      setHesap((hesap) => hesap + (order.price + secim));
+      setSiparis((siparis) => ({ ...siparis, piece: siparis.piece + 1 }));
+    } else if (event.target.value === "-") {
+      if (siparis.piece > 1) {
+        setHesap((hesap) => hesap - (order.price + secim));
+        setSiparis((siparis) => ({ ...siparis, piece: siparis.piece - 1 }));
+      }
+    }
+  }
+
+  let history = useHistory();
+
+  function success() {
+    history.push("/success");
+  }
+
+  console.log(siparis);
+  console.log(hesap);
+  console.log(secim);
   return (
     <>
       <OrderHeader>
@@ -193,18 +247,21 @@ export default function Order({ clicked, setHesap, selectedButton }) {
                 name="size"
                 type="radio"
                 value="S"
+                onChange={changeHandler}
               ></RadioButon>{" "}
               <RadioButon
                 label="M"
                 name="size"
                 type="radio"
                 value="M"
+                onChange={changeHandler}
               ></RadioButon>
               <RadioButon
                 label="L"
                 name="size"
                 type="radio"
                 value="L"
+                onChange={changeHandler}
               ></RadioButon>
             </div>
           </div>
@@ -213,8 +270,8 @@ export default function Order({ clicked, setHesap, selectedButton }) {
               <H5>
                 Hamur Seç <span style={{ color: "red" }}>*</span>
               </H5>
-              <Kalınlık>
-                <option value="" disabled selected>
+              <Kalınlık name="weight" onChange={changeHandler} defaultValue="">
+                <option value="" disabled>
                   -Hamur Kalınlığı Seç-
                 </option>
                 <option value="kucuk">Küçük</option>
@@ -229,8 +286,13 @@ export default function Order({ clicked, setHesap, selectedButton }) {
           <p>En fazla 10 malzeme seçebilirsiniz.</p>
           <CheckboxDiv>
             {order.ingredients &&
-              order.ingredients.map((item) => (
-                <Checkbox key={item.id} ingredient={item.ingredient} />
+              order.ingredients.map((item, index) => (
+                <Checkbox
+                  key={index}
+                  ingredient={item.ingredient}
+                  cost={item.cost}
+                  changeCheckbox={changeHandler}
+                />
               ))}
           </CheckboxDiv>
         </div>
@@ -260,7 +322,9 @@ export default function Order({ clicked, setHesap, selectedButton }) {
           }}
         >
           <ButonDiv>
-            <PieceButon>-</PieceButon>
+            <PieceButon value="-" onClick={clickPiece}>
+              -
+            </PieceButon>
             <p
               style={{
                 width: "47px",
@@ -271,9 +335,11 @@ export default function Order({ clicked, setHesap, selectedButton }) {
                 backgroundColor: "#faf7f2",
               }}
             >
-              1
+              {siparis.piece}
             </p>
-            <PieceButon>+</PieceButon>
+            <PieceButon value="+" onClick={clickPiece}>
+              +
+            </PieceButon>
           </ButonDiv>
           <div style={{ paddingBottom: "150px" }}>
             <div
@@ -293,7 +359,7 @@ export default function Order({ clicked, setHesap, selectedButton }) {
                 }}
               >
                 <p>Seçimler</p>
-                <p>25$</p>
+                <p>{secim}$</p>
               </div>
               <div
                 style={{
@@ -303,7 +369,7 @@ export default function Order({ clicked, setHesap, selectedButton }) {
                 }}
               >
                 <p>Toplam</p>
-                <p>125$</p>
+                <p>{hesap}$</p>
               </div>
             </div>
             <button
@@ -315,6 +381,7 @@ export default function Order({ clicked, setHesap, selectedButton }) {
                 fontWeight: "bold",
                 border: "none",
               }}
+              onClick={success}
             >
               Sipariş Ver
             </button>

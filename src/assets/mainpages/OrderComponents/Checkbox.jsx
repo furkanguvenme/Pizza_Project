@@ -1,11 +1,19 @@
 import "./Checkbox.css";
 
-export default function Checkbox({ ingredient }) {
+export default function Checkbox({ ingredient, cost, changeCheckbox }) {
   const id = `cbx-${ingredient}`;
 
   return (
     <div className="checkbox-wrapper-46">
-      <input type="checkbox" id={id} className="inp-cbx" />
+      <input
+        type="checkbox"
+        id={id}
+        className="inp-cbx"
+        name="extra"
+        value={ingredient}
+        data-cost={cost}
+        onChange={changeCheckbox}
+      />
       <label htmlFor={id} className="cbx">
         <span>
           <svg viewBox="0 0 12 10" height="10px" width="12px">
