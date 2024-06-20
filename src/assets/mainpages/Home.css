@@ -16,11 +16,43 @@
     align-items: center;
 }
 
+.homeHeaderDiv .firsat {
+    font-family: "Satisfy";
+    color: #FDC913;
+    font-size: 28px;
+    margin: 50px 0 0 0;
+}
+
+.homeHeaderDiv .aclik {
+    font-family: "Roboto Condensed";
+    font-size: 80px;
+    font-weight: 300;
+    color: white;
+    margin:0;
+}
+
+.acim {
+    background-color: #FDC913;
+    width: 170px;
+    border: none;
+    height: 50px;
+    border-radius: 25px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
 .homeArticle {
     display: flex;
     flex-direction: row;
     gap: 60px;
     justify-content: center;
+}
+
+.homeArticle p {
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+    font-weight: 500;
 }
 
 .cardPage {
@@ -50,6 +82,7 @@
     border-radius: 15px;
 }
 
+
 .card-2 {
     width: 636px;
     height: 256px;
@@ -59,6 +92,14 @@
     background-repeat: no-repeat; 
     border-radius: 15px;
 
+}
+
+.card-2 p {
+    font-size: 30px;
+    font-family: "Barlow";
+    color: white;
+    font-weight: 500;
+    margin: 0;
 }
 
 .card-3 {
@@ -71,9 +112,43 @@
     border-radius: 15px;
 }
 
+.card-3 p {
+    font-size: 30px;
+    font-family: "Barlow";
+    color: black;
+    font-weight: 500;
+    margin: 0;
+}
+
 .elements-1 {
     width: max-content;
     margin: 50px 0 0 50px;
+}
+
+.elements-1 .ozel {
+    font-family: "Quattrocento";
+    font-size: 60px;
+    font-weight: bold;
+    color: white;
+    margin: 0;
+}
+
+.elements-1 .burger {
+    font-family: "Barlow";
+    color: white;
+    margin: 0;
+    font-size: 18px;
+}
+
+.siparis {
+    background-color: white;
+    border: none;
+    color: #CE2829;
+    width: 120px;
+    height: 40px;
+    border-radius: 20px;
+    margin-top: 20px;
+    font-weight: bold;
 }
 
 .homeMain {
@@ -82,4 +157,18 @@
     flex-direction: column;
     align-items: center;
     background-color: #FAF7F2;
+}
+
+.homeMain .most {
+    font-family: "Satisfy";
+    color: #CE2829;
+    font-size: 28px;
+    margin-bottom: 0px;
+}
+
+.homeMain .doy {
+    font-family: "Barlow";
+    color: black;
+    font-size: 32px;
+    font-weight: 600;
 }

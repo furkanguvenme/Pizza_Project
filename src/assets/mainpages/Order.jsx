@@ -191,7 +191,10 @@ export default function Order({
         }
 
         setSecim((prevSecim) => prevSecim - prevCost + extraCost);
-        setHesap((prevHesap) => prevHesap - prevCost + extraCost);
+        setHesap(
+          (prevHesap) =>
+            prevHesap - siparis.piece * prevCost + siparis.piece * extraCost
+        );
         setPrevSize(event.target.value);
       }
 
@@ -212,7 +215,10 @@ export default function Order({
         }
 
         setSecim((prevSecim) => prevSecim - prevCost + extraCost);
-        setHesap((prevHesap) => prevHesap - prevCost + extraCost);
+        setHesap(
+          (prevHesap) =>
+            prevHesap - siparis.piece * prevCost + siparis.piece * extraCost
+        );
         setPrevWeight(event.target.value);
       }
 
@@ -231,7 +237,7 @@ export default function Order({
         newExtra = oldExtra.filter((v) => v !== value);
         setSelectedExtras((extras) => extras.filter((v) => v !== value));
         setSecim((secim) => secim - extraCost);
-        setHesap((hesap) => hesap - extraCost);
+        setHesap((hesap) => hesap - siparis.piece * extraCost);
       } else {
         if (selectedExtras.length >= 10) {
           setValidationMessage("En fazla 10 malzeme seçebilirsiniz.");
@@ -240,7 +246,7 @@ export default function Order({
         newExtra = [...oldExtra, value];
         setSelectedExtras((extras) => [...extras, value]);
         setSecim((secim) => secim + extraCost);
-        setHesap((hesap) => hesap + extraCost);
+        setHesap((hesap) => hesap + siparis.piece * extraCost);
       }
 
       setSiparis({ ...siparis, [event.target.name]: newExtra });
@@ -253,12 +259,12 @@ export default function Order({
 
   function clickPiece(event) {
     if (event.target.value === "+") {
-      setHesap((hesap) => hesap + (order.price + secim));
       setSiparis((siparis) => ({ ...siparis, piece: siparis.piece + 1 }));
+      setHesap((hesap) => hesap + (order.price + secim));
     } else if (event.target.value === "-") {
       if (siparis.piece > 1) {
-        setHesap((hesap) => hesap - (order.price + secim));
         setSiparis((siparis) => ({ ...siparis, piece: siparis.piece - 1 }));
+        setHesap((hesap) => hesap - order.price - secim);
       }
     }
   }
