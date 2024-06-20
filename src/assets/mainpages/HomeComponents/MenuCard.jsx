@@ -4,7 +4,7 @@ import Order from "../Order";
 
 const MenuCardDiv = styled.button`
   width: 408px;
-  height: min-content;
+  height: 440px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -15,19 +15,21 @@ const MenuCardDiv = styled.button`
 `;
 
 const MenuCardImg = styled.img`
-  width: 256px;
-  height: 256px;
+  width: 306px;
+  height: 306px;
   object-fit: cover;
-  border-radius: 128px;
+  border-radius: 153px;
   margin-top: 30px;
 `;
 
 const MenuCardName = styled.p`
   font-family: "Barlow";
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 600;
   width: 350px;
   margin-bottom: 0;
+  margin-top: 10px;
+  text-align: left;
 `;
 
 const MenuDiv = styled.div`
@@ -45,6 +47,7 @@ const MenuDivP = styled.p`
 
 const MenuPrice = styled.p`
   font-size: 20px;
+  font-weight: 700;
 `;
 
 export default function MenuCard({

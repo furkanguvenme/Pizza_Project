@@ -6,8 +6,9 @@ const FooterTop = styled.div`
   flex-direction: row;
   justify-content: space-around;
   font-family: "Barlow";
-  padding: 50px 50px 20px 50px;
+  padding: 100px 50px 20px 50px;
   color: white;
+  height: 481.25px;
 `;
 
 const FooterTop1 = styled.div`
@@ -37,6 +38,7 @@ const FooterBottom = styled.div`
   padding: 0 16.25vw;
   font-family: "Barlow";
   color: white;
+  height: 80px;
 `;
 
 const InstaDiv = styled.div`
@@ -46,6 +48,12 @@ const InstaDiv = styled.div`
 `;
 
 const H2 = styled.h2`
+  font-weight: 500;
+  font-size: 24px;
+`;
+
+const P = styled.p`
+  font-size: 18px;
   font-weight: 400;
 `;
 
@@ -58,12 +66,15 @@ const Cizgi = styled.div`
 export default function Footer() {
   return (
     <>
-      <FooterTop style={{ backgroundColor: "black" }}>
+      <FooterTop style={{ backgroundColor: "#1A1A1A" }}>
         <FooterTop1>
           <div>
             <div>
               {" "}
-              <img src="./Assets/mile2-aseets/footer/logo-footer.svg" />
+              <img
+                style={{ marginTop: "-44px" }}
+                src="./Assets/mile2-aseets/footer/logo-footer.svg"
+              />
             </div>
             <FooterNav>
               <NavA href="#">
@@ -92,16 +103,16 @@ export default function Footer() {
           </div>
           <div>
             <H2 style={{ marginBottom: "60px" }}>Sıccacık Menuler</H2>
-            <p>Terminal Pizza</p>
-            <p>5 Kişilik Hechathion Pizza</p>
-            <p>useEffect Tavuklu Pizza</p>
-            <p>Beyaz Console Frosty</p>
-            <p>Testler Geçti Mutlu Burger</p>
-            <p>Position Absolute Acı Burger</p>
+            <P>Terminal Pizza</P>
+            <P>5 Kişilik Hechathion Pizza</P>
+            <P>useEffect Tavuklu Pizza</P>
+            <P>Beyaz Console Frosty</P>
+            <P>Testler Geçti Mutlu Burger</P>
+            <P>Position Absolute Acı Burger</P>
           </div>
         </FooterTop1>
         <div>
-          <H2>Instagram</H2>
+          <H2 style={{ marginBottom: "40px" }}>Instagram</H2>
           <InstaDiv>
             <img
               src="./Assets/mile2-aseets/footer/insta/li-0.png"
@@ -131,7 +142,9 @@ export default function Footer() {
         </div>
       </FooterTop>
       <Cizgi />
-      <FooterBottom style={{ backgroundColor: "black", paddingTop: "15px" }}>
+      <FooterBottom
+        style={{ backgroundColor: "#1a1a1a", paddingTop: "27.5px" }}
+      >
         <p>© 2023 Teknolojik Yemekler</p>
         <p>
           <FaSquareXTwitter style={{ scale: "1.5" }} />

@@ -61,7 +61,6 @@ const Price = styled.div`
 `;
 
 export default function Success(order) {
-  console.log(order);
   return (
     <SuccessDiv>
       <img style={{ marginTop: "56px" }} src="./Assets/mile1-assets/logo.svg" />

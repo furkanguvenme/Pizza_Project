@@ -16,6 +16,7 @@ function App() {
     weight: "",
     extra: [],
     piece: 1,
+    note: "",
   });
   const [selectedButton, setSelectedButton] = useState(
     menuItems.find((item) => item.name === "Ramen").types

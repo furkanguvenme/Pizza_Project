@@ -16,6 +16,7 @@ const FoodButon = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
+  font-weight: 500;
 
   &:hover {
     background-color: black;
@@ -125,7 +126,12 @@ export default function Home({
       </header>
       <article className="homeArticle">
         <p
-          style={{ display: "flex", alignItems: "center", paddingTop: "10px" }}
+          style={{
+            display: "flex",
+            alignItems: "center",
+            paddingTop: "10px",
+            fontWeight: "500",
+          }}
         >
           <img
             style={{ paddingRight: "10px" }}
@@ -134,7 +140,12 @@ export default function Home({
           YENİ! Kore
         </p>
         <p
-          style={{ display: "flex", alignItems: "center", paddingTop: "10px" }}
+          style={{
+            display: "flex",
+            alignItems: "center",
+            paddingTop: "10px",
+            fontWeight: "500",
+          }}
         >
           <img
             style={{ paddingRight: "10px" }}
@@ -143,7 +154,12 @@ export default function Home({
           Pizza
         </p>
         <p
-          style={{ display: "flex", alignItems: "center", paddingTop: "10px" }}
+          style={{
+            display: "flex",
+            alignItems: "center",
+            paddingTop: "10px",
+            fontWeight: "500",
+          }}
         >
           <img
             style={{ paddingRight: "10px" }}
@@ -152,7 +168,12 @@ export default function Home({
           Burger
         </p>
         <p
-          style={{ display: "flex", alignItems: "center", paddingTop: "10px" }}
+          style={{
+            display: "flex",
+            alignItems: "center",
+            paddingTop: "10px",
+            fontWeight: "500",
+          }}
         >
           <img
             style={{ paddingRight: "10px" }}
@@ -161,7 +182,12 @@ export default function Home({
           Kızartmalar
         </p>
         <p
-          style={{ display: "flex", alignItems: "center", paddingTop: "10px" }}
+          style={{
+            display: "flex",
+            alignItems: "center",
+            paddingTop: "10px",
+            fontWeight: "500",
+          }}
         >
           <img
             style={{ paddingRight: "10px" }}
@@ -170,7 +196,12 @@ export default function Home({
           Fast food
         </p>
         <p
-          style={{ display: "flex", alignItems: "center", paddingTop: "10px" }}
+          style={{
+            display: "flex",
+            alignItems: "center",
+            paddingTop: "10px",
+            fontWeight: "500",
+          }}
         >
           <img
             style={{ paddingRight: "10px" }}
