@@ -24,7 +24,7 @@ function App() {
   const [clicked, setClicked] = useState("");
   return (
     <Switch>
-      <Route path="/home">
+      <Route path="/" exact>
         <Home
           menuItems={menuItems}
           selectedButton={selectedButton}
