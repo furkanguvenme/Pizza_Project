@@ -5,6 +5,9 @@ import Footer from "./SuccessComponents/Footer";
 import Checkbox from "./OrderComponents/Checkbox";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import axios from "axios";
+import "./Order.css";
+import Phone from "./OrderComponents/Phone";
+import Name from "./OrderComponents/Name";
 
 const OrderHeader = styled.header`
   display: flex;
@@ -273,9 +276,21 @@ export default function Order({
     setSiparis((siparis) => ({ ...siparis, note: event.target.value }));
   }
 
+  function userInfo(event) {
+    if (event.target.id == "phonenumber") {
+      setSiparis((siparis) => ({ ...siparis, userPhone: event.target.value }));
+    } else {
+      setSiparis((siparis) => ({ ...siparis, userName: event.target.value }));
+    }
+  }
+
   let history = useHistory();
 
   function success() {
+    if (siparis.userName.length < 3) {
+      setValidationMessage("Kullanıcı adı 3 karakterden uzun olmalıdır.");
+      return;
+    }
     if (selectedExtras.length < 4) {
       setValidationMessage("En az 4 malzeme seçmelisiniz.");
       return;
@@ -338,6 +353,10 @@ export default function Order({
           flexDirection: "column",
         }}
       >
+        <div className="kullanici">
+          <Name userInfo={userInfo} />
+          {/*<Phone userInfo={userInfo} />*/}
+        </div>
         <SizeDiv>
           <div>
             <H5>
@@ -382,9 +401,9 @@ export default function Order({
                 <option value="" disabled>
                   -Hamur Kalınlığı Seç-
                 </option>
-                <option value="kucuk">Küçük</option>
+                <option value="ince">İnce</option>
                 <option value="orta">Orta</option>
-                <option value="buyuk">Büyük</option>
+                <option value="kalin">Kalın</option>
               </Kalınlık>
             </div>
           </div>
@@ -487,6 +506,7 @@ export default function Order({
               </div>
             </div>
             <button
+              className="siparisButon"
               style={{
                 width: "386px",
                 height: "62px",

@@ -59,7 +59,7 @@ export default function MenuCard({
   cardClick,
 }) {
   return (
-    <MenuCardDiv name={name} onClick={cardClick}>
+    <MenuCardDiv name={name} className="foodCard" onClick={cardClick}>
       <MenuCardImg src={picture} />
       <MenuCardName>{name}</MenuCardName>
       <MenuDiv>

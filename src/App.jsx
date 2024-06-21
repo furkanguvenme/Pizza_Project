@@ -17,6 +17,8 @@ function App() {
     extra: [],
     piece: 1,
     note: "",
+    userName: "",
+    userPhone: "",
   });
   const [selectedButton, setSelectedButton] = useState(
     menuItems.find((item) => item.name === "Ramen").types
