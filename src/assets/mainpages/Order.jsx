@@ -287,19 +287,39 @@ export default function Order({
   let history = useHistory();
 
   function success() {
+    if (!siparis.userName) {
+      setValidationMessage("Kullanıcı adı giriniz.");
+      return;
+    }
+
     if (siparis.userName.length < 3) {
       setValidationMessage("Kullanıcı adı 3 karakterden uzun olmalıdır.");
       return;
     }
+
     if (selectedExtras.length < 4) {
       setValidationMessage("En az 4 malzeme seçmelisiniz.");
       return;
-    } else {
-      if (selectedExtras.length > 10) {
-        setValidationMessage("En fazla 10 malzeme seçebilirsiniz.");
-        return;
-      }
+    } else if (selectedExtras.length > 10) {
+      setValidationMessage("En fazla 10 malzeme seçebilirsiniz.");
+      return;
     }
+
+    if (!siparis.size) {
+      setValidationMessage("Lütfen bir boyut seçiniz.");
+      return;
+    }
+
+    if (!siparis.weight) {
+      setValidationMessage("Lütfen bir hamur kalınlığı seçiniz.");
+      return;
+    }
+
+    if (selectedExtras.length === 0) {
+      setValidationMessage("Lütfen en az bir malzeme seçiniz.");
+      return;
+    }
+
     setValidationMessage("");
     history.push("/success");
     axios
