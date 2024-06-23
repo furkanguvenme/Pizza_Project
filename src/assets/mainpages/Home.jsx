@@ -78,7 +78,12 @@ export default function Home({
           <p className="firsat">fırsatı kaçırma</p>
           <p className="aclik">KOD ACIKTIRIR</p>
           <p className="aclik">PIZZA, DOYURUR</p>
-          <button className="acim">ACIKTIM</button>
+          <button
+            className="acim"
+            onClick={() => (window.location.hash = "CardDiv")}
+          >
+            ACIKTIM
+          </button>
         </div>
       </header>
       <article className="homeArticle">
@@ -163,7 +168,9 @@ export default function Home({
         </div>
       </article>
       <main className="homeMain">
-        <p className="most">en çok paketlenen menüler</p>
+        <p className="most" id="CardDiv">
+          en çok paketlenen menüler
+        </p>
         <p className="doy">Acıktıran Kodlara Doyuran Lezzetler</p>
         <FoodDiv>
           <FoodButon name="Ramen" onClick={handleClick}>
