@@ -12,6 +12,12 @@ const MenuCardDiv = styled.button`
   background-color: white;
   border-radius: 15px;
   border: none;
+  transition: 0.5s;
+
+  &:hover {
+    transform: scale(1.2);
+    transition: 0.5s;
+  }
 `;
 
 const MenuCardImg = styled.img`
