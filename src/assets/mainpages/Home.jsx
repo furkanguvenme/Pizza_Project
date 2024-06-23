@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import styled from "styled-components";
 import "./Home.css";
 import MenuCard from "./HomeComponents/MenuCard";
@@ -20,6 +21,11 @@ const FoodButon = styled.button`
     background-color: black;
     color: white;
     cursor: pointer;
+  }
+
+  &.active {
+    background-color: black;
+    color: white;
   }
 `;
 
@@ -52,6 +58,7 @@ export default function Home({
   setClicked,
 }) {
   let history = useHistory();
+  const [activeButton, setActiveButton] = useState("Ramen");
 
   function cardClick(event) {
     history.push("/order");
@@ -59,16 +66,13 @@ export default function Home({
   }
 
   function handleClick(event) {
-    // event.currentTarget ile tıklanan butonu al
     const buttonName = event.currentTarget.name;
+    setActiveButton(buttonName);
     const selectedMenuItem = menuItems.find((item) => item.name === buttonName);
     if (selectedMenuItem) {
       setSelectedButton(selectedMenuItem.types);
     }
   }
-
-  console.log(menuItems);
-  console.log(selectedButton);
 
   return (
     <>
@@ -173,47 +177,71 @@ export default function Home({
         </p>
         <p className="doy">Acıktıran Kodlara Doyuran Lezzetler</p>
         <FoodDiv>
-          <FoodButon name="Ramen" onClick={handleClick}>
+          <FoodButon
+            name="Ramen"
+            onClick={handleClick}
+            className={activeButton === "Ramen" ? "active" : ""}
+          >
             <img
               style={{ paddingRight: "10px" }}
               src="./Assets/mile2-aseets/icons/1.svg"
             />
             Ramen
           </FoodButon>
-          <FoodButon name="Pizza" onClick={handleClick}>
+          <FoodButon
+            name="Pizza"
+            onClick={handleClick}
+            className={activeButton === "Pizza" ? "active" : ""}
+          >
             <img
               style={{ paddingRight: "10px" }}
               src="./Assets/mile2-aseets/icons/2.svg"
             />
             Pizza
           </FoodButon>
-          <FoodButon name="Burger" onClick={handleClick}>
+          <FoodButon
+            name="Burger"
+            onClick={handleClick}
+            className={activeButton === "Burger" ? "active" : ""}
+          >
             <img
               style={{ paddingRight: "10px" }}
               src="./Assets/mile2-aseets/icons/3.svg"
             />
             Burger
           </FoodButon>
-          <FoodButon name="French fries" onClick={handleClick}>
+          <FoodButon
+            name="French fries"
+            onClick={handleClick}
+            className={activeButton === "French fries" ? "active" : ""}
+          >
             <img
               style={{ paddingRight: "10px" }}
               src="./Assets/mile2-aseets/icons/4.svg"
             />
             French fries
           </FoodButon>
-          <FoodButon name="Fast food" onClick={handleClick}>
+          <FoodButon
+            name="Fast food"
+            onClick={handleClick}
+            className={activeButton === "Fast food" ? "active" : ""}
+          >
             <img
               style={{ paddingRight: "10px" }}
               src="./Assets/mile2-aseets/icons/5.svg"
             />
             Fast food
           </FoodButon>
-          <FoodButon name="Soft drinks" onClick={handleClick}>
+          <FoodButon
+            name="Soft drinks"
+            onClick={handleClick}
+            className={activeButton === "Soft drinks" ? "active" : ""}
+          >
             <img
               style={{ paddingRight: "10px" }}
               src="./Assets/mile2-aseets/icons/6.svg"
             />
-            Soft drikns
+            Soft drinks
           </FoodButon>
         </FoodDiv>
       </main>
