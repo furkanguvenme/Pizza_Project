@@ -321,6 +321,7 @@ export default function Order({
     }
 
     setValidationMessage("");
+    window.scrollTo(0, 0);
     history.push("/success");
     axios
       .post("https://reqres.in/api/pizza", siparis)

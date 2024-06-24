@@ -61,6 +61,7 @@ export default function Home({
   const [activeButton, setActiveButton] = useState("Ramen");
 
   function cardClick(event) {
+    window.scrollTo(0, 0);
     history.push("/order");
     setClicked(event.currentTarget.name);
   }
