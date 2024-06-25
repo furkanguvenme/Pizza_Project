@@ -63,6 +63,12 @@ const Cizgi = styled.div`
   height: 1px;
 `;
 
+const Sıcacık = styled.div`
+  @media (max-width: 1000px) {
+    display: none;
+  }
+`;
+
 export default function Footer() {
   return (
     <>
@@ -101,7 +107,7 @@ export default function Footer() {
               </NavA>
             </FooterNav>
           </div>
-          <div>
+          <Sıcacık>
             <H2 style={{ marginBottom: "60px" }}>Sıccacık Menuler</H2>
             <P>Terminal Pizza</P>
             <P>5 Kişilik Hechathion Pizza</P>
@@ -109,9 +115,9 @@ export default function Footer() {
             <P>Beyaz Console Frosty</P>
             <P>Testler Geçti Mutlu Burger</P>
             <P>Position Absolute Acı Burger</P>
-          </div>
+          </Sıcacık>
         </FooterTop1>
-        <div>
+        <Sıcacık>
           <H2 style={{ marginBottom: "40px" }}>Instagram</H2>
           <InstaDiv>
             <img
@@ -139,7 +145,7 @@ export default function Footer() {
               style={{ scale: "0.9" }}
             />
           </InstaDiv>
-        </div>
+        </Sıcacık>
       </FooterTop>
       <Cizgi />
       <FooterBottom

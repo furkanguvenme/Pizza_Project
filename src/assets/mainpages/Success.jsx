@@ -21,6 +21,10 @@ const SiparisAlındı = styled.h1`
   font-size: 86px;
   color: white;
   font-weight: 300;
+
+  @media (max-width: 1000px) {
+    font-size: 44px;
+  }
 `;
 
 const OrderName = styled.h3`

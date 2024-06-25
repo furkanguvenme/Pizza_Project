@@ -52,3 +52,10 @@
 .checkbox-wrapper-46 .inp-cbx:checked + .cbx span:first-child svg {
   stroke-dashoffset: 0;
 }
+
+@media (max-width: 1000px) {
+  .checkbox-wrapper-46 .cbx {
+    transform: scale(0.7);
+    display: flex;
+  }
+}

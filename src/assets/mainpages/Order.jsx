@@ -27,10 +27,15 @@ const OrderArticle = styled.article`
 `;
 
 const ClippedImage = styled.img`
-  width: 595px;
+  width: 31vw;
   object-fit: cover;
   clip-path: inset(80px 0 0 0);
   margin-top: -80px;
+  @media (max-width: 1000px) {
+    clip-path: inset(0 0 0 0);
+    margin-top: 0px;
+    width: 75vw;
+  }
 `;
 
 const InfoDiv = styled.div`
@@ -111,14 +116,29 @@ const SizeDiv = styled.div`
   flex-direction: row;
   justify-content: space-between;
   margin-top: 20px;
+
+  @media (max-width: 1000px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    height: 20vh;
+    margin-top: 0;
+  }
 `;
 
 const CheckboxDiv = styled.div`
-  width: 595px;
+  width: 31vw;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
   padding-bottom: 100px;
+
+  @media (max-width: 1000px) {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    width: 100vw;
+  }
 `;
 
 const ButonDiv = styled.div`
@@ -145,6 +165,25 @@ const ValidationMessage = styled.p`
   font-family: "Barlow";
   font-size: 14px;
   margin-top: 10px;
+`;
+
+const Descript = styled.p`
+  font-family: "Barlow";
+  font-size: 16px;
+  line-height: 28.8px;
+  color: #5f5f5f;
+
+  @media (max-width: 1000px) {
+    font-size: 12px;
+  }
+`;
+
+const AricleDiv = styled.div`
+  width: 595px;
+
+  @media (max-width: 1000px) {
+    width: 75vw;
+  }
 `;
 
 export default function Order({
@@ -339,7 +378,7 @@ export default function Order({
         <img src="./Assets/mile1-assets/logo.svg" />
       </OrderHeader>
       <OrderArticle>
-        <div style={{ width: "595px" }}>
+        <AricleDiv>
           <ClippedImage src="./Assets/mile2-aseets/pictures/form-banner.png" />
           <p style={{ margin: "44px 0" }}>
             Anasayfa -
@@ -355,17 +394,8 @@ export default function Order({
               <p>{`(${order.id})`}</p>
             </InfoDiv2>
           </InfoDiv>
-          <p
-            style={{
-              fontFamily: "Barlow",
-              fontSize: "16px",
-              lineHeight: "28.8px",
-              color: "#5F5F5F",
-            }}
-          >
-            {order.description}
-          </p>
-        </div>
+          <Descript>{order.description}</Descript>
+        </AricleDiv>
       </OrderArticle>
       <main
         style={{
@@ -430,8 +460,10 @@ export default function Order({
           </div>
         </SizeDiv>
         <div style={{ marginTop: "50px" }}>
-          <h6 style={{ paddingBottom: "5px" }}>Ek Malzemeler</h6>
-          <p>En fazla 10 malzeme seçebilirsiniz.</p>
+          <div className="ekMalz">
+            <h6 style={{ paddingBottom: "5px" }}>Ek Malzemeler</h6>
+            <p>En fazla 10 malzeme seçebilirsiniz.</p>
+          </div>
           <CheckboxDiv>
             {order.ingredients &&
               order.ingredients.map((item, index) => (
@@ -447,32 +479,17 @@ export default function Order({
             <ValidationMessage>{validationMessage}</ValidationMessage>
           )}
         </div>
-        <label>
-          <h5 style={{ paddingBottom: "15px" }}>Sipariş Notu</h5>
+        <label className="label">
+          <h5>Sipariş Notu</h5>
 
           <textarea
-            style={{
-              width: "595px",
-              height: "56px",
-              paddingTop: "15px",
-              border: "none",
-              backgroundColor: "#FAF7F2",
-              fontFamily: "Barlow",
-              paddingLeft: "15px",
-            }}
+            className="textarea"
             onChange={noteChange}
             placeholder="Siparişine eklemek istediğin bir not var mı?"
           ></textarea>
         </label>
         <hr style={{ color: "black", width: "595px", margin: "24px 0" }} />
-        <div
-          style={{
-            width: "595px",
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "space-between",
-          }}
-        >
+        <div className="siparisDiv">
           <ButonDiv>
             <PieceButon value="-" onClick={clickPiece}>
               -

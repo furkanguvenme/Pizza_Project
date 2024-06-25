@@ -4,6 +4,8 @@ import "./Home.css";
 import MenuCard from "./HomeComponents/MenuCard";
 import Footer from "./SuccessComponents/Footer";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import DropMenu from "./HomeComponents/DropMenu";
+import MiniCard from "./HomeComponents/MiniCard";
 
 const FoodButon = styled.button`
   width: 187px;
@@ -29,11 +31,26 @@ const FoodButon = styled.button`
   }
 `;
 
+const FoodBtnDiv = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  @media (max-width: 1000px) {
+    transform: scale(0.7);
+  }
+`;
+
 const FoodDiv = styled.div`
   display: flex;
-  width: 1272px;
+  width: 66vw;
   justify-content: center;
   gap: 30px;
+
+  @media (max-width: 1000px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 `;
 
 const CardSection = styled.section`
@@ -42,6 +59,11 @@ const CardSection = styled.section`
   justify-content: center;
   padding: 50px 0 125px 0;
   background-color: #faf7f2;
+
+  @media (max-width: 1000px) {
+    justify-content: left;
+    height: 1000px;
+  }
 `;
 
 const CardDiv = styled.div`
@@ -49,6 +71,14 @@ const CardDiv = styled.div`
   flex-direction: row;
   width: 1272px;
   gap: 24px;
+
+  @media (max-width: 1000px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: scale(0.7);
+    margin-top: -150px;
+  }
 `;
 
 export default function Home({
@@ -92,42 +122,42 @@ export default function Home({
         </div>
       </header>
       <article className="homeArticle">
-        <p>
+        <p className="articleBtn">
           <img
             style={{ paddingRight: "10px" }}
             src="./Assets/mile2-aseets/icons/1.svg"
           />
           YENİ! Kore
         </p>
-        <p>
+        <p className="articleBtn">
           <img
             style={{ paddingRight: "10px" }}
             src="./Assets/mile2-aseets/icons/2.svg"
           />
           Pizza
         </p>
-        <p>
+        <p className="articleBtn">
           <img
             style={{ paddingRight: "10px" }}
             src="./Assets/mile2-aseets/icons/3.svg"
           />
           Burger
         </p>
-        <p>
+        <p className="articleBtn">
           <img
             style={{ paddingRight: "10px" }}
             src="./Assets/mile2-aseets/icons/4.svg"
           />
           Kızartmalar
         </p>
-        <p>
+        <p className="articleBtn">
           <img
             style={{ paddingRight: "10px" }}
             src="./Assets/mile2-aseets/icons/5.svg"
           />
           Fast food
         </p>
-        <p>
+        <p className="articleBtn">
           <img
             style={{ paddingRight: "10px" }}
             src="./Assets/mile2-aseets/icons/6.svg"
@@ -135,6 +165,7 @@ export default function Home({
           Gazlı İçecek
         </p>
       </article>
+
       <article>
         <div className="cardPage">
           <div className="card-1">
@@ -154,14 +185,14 @@ export default function Home({
           </div>
           <div className="cardPage2">
             <div className="card-2">
-              <div style={{ margin: "50px 0 0 50px" }}>
+              <div className="card-p">
                 <p>Hackathlon</p>
                 <p>Burger Menü</p>
                 <button className="siparis">Sipariş Ver</button>
               </div>
             </div>
             <div className="card-3">
-              <div style={{ margin: "50px 0 0 50px" }}>
+              <div className="card-p">
                 <p>
                   <span style={{ color: "#CE2829" }}>Çoooook</span> hızlı
                 </p>
@@ -177,93 +208,107 @@ export default function Home({
           en çok paketlenen menüler
         </p>
         <p className="doy">Acıktıran Kodlara Doyuran Lezzetler</p>
-        <FoodDiv>
+
+        <FoodDiv className="foodDiv">
           <FoodButon
             name="Ramen"
             onClick={handleClick}
             className={activeButton === "Ramen" ? "active" : ""}
           >
-            <img
-              style={{ paddingRight: "10px" }}
-              src="./Assets/mile2-aseets/icons/1.svg"
-            />
-            Ramen
+            <FoodBtnDiv>
+              <img
+                style={{ paddingRight: "10px" }}
+                src="./Assets/mile2-aseets/icons/1.svg"
+              />
+              Ramen
+            </FoodBtnDiv>
           </FoodButon>
           <FoodButon
             name="Pizza"
             onClick={handleClick}
             className={activeButton === "Pizza" ? "active" : ""}
           >
-            <img
-              style={{ paddingRight: "10px" }}
-              src="./Assets/mile2-aseets/icons/2.svg"
-            />
-            Pizza
+            <FoodBtnDiv>
+              <img
+                style={{ paddingRight: "10px" }}
+                src="./Assets/mile2-aseets/icons/2.svg"
+              />
+              Pizza
+            </FoodBtnDiv>
           </FoodButon>
           <FoodButon
             name="Burger"
             onClick={handleClick}
             className={activeButton === "Burger" ? "active" : ""}
           >
-            <img
-              style={{ paddingRight: "10px" }}
-              src="./Assets/mile2-aseets/icons/3.svg"
-            />
-            Burger
+            <FoodBtnDiv>
+              <img
+                style={{ paddingRight: "10px" }}
+                src="./Assets/mile2-aseets/icons/3.svg"
+              />
+              Burger
+            </FoodBtnDiv>
           </FoodButon>
           <FoodButon
             name="French fries"
             onClick={handleClick}
             className={activeButton === "French fries" ? "active" : ""}
           >
-            <img
-              style={{ paddingRight: "10px" }}
-              src="./Assets/mile2-aseets/icons/4.svg"
-            />
-            French fries
+            <FoodBtnDiv>
+              <img
+                style={{ paddingRight: "10px" }}
+                src="./Assets/mile2-aseets/icons/4.svg"
+              />
+              French fries
+            </FoodBtnDiv>
           </FoodButon>
           <FoodButon
             name="Fast food"
             onClick={handleClick}
             className={activeButton === "Fast food" ? "active" : ""}
           >
-            <img
-              style={{ paddingRight: "10px" }}
-              src="./Assets/mile2-aseets/icons/5.svg"
-            />
-            Fast food
+            <FoodBtnDiv>
+              <img
+                style={{ paddingRight: "10px" }}
+                src="./Assets/mile2-aseets/icons/5.svg"
+              />
+              Fast food
+            </FoodBtnDiv>
           </FoodButon>
           <FoodButon
             name="Soft drinks"
             onClick={handleClick}
             className={activeButton === "Soft drinks" ? "active" : ""}
           >
-            <img
-              style={{ paddingRight: "10px" }}
-              src="./Assets/mile2-aseets/icons/6.svg"
-            />
-            Soft drinks
+            <FoodBtnDiv>
+              <img
+                style={{ paddingRight: "10px" }}
+                src="./Assets/mile2-aseets/icons/6.svg"
+              />
+              Soft drinks
+            </FoodBtnDiv>
           </FoodButon>
         </FoodDiv>
+        {
+          <CardSection>
+            <CardDiv>
+              {selectedButton.map((item) => (
+                <MenuCard
+                  key={item.id}
+                  id={item.id}
+                  raiting={item.rating}
+                  name={item.name}
+                  price={item.price}
+                  picture={item.picture}
+                  selectedButton={selectedButton}
+                  cardClick={cardClick}
+                />
+              ))}
+            </CardDiv>
+          </CardSection>
+        }
       </main>
-      {
-        <CardSection>
-          <CardDiv>
-            {selectedButton.map((item) => (
-              <MenuCard
-                key={item.id}
-                id={item.id}
-                raiting={item.rating}
-                name={item.name}
-                price={item.price}
-                picture={item.picture}
-                selectedButton={selectedButton}
-                cardClick={cardClick}
-              />
-            ))}
-          </CardDiv>
-        </CardSection>
-      }
+
       <footer>
         <Footer />
       </footer>
