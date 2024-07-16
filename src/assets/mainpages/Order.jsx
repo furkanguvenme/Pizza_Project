@@ -378,7 +378,7 @@ export default function Order({
       </OrderHeader>
       <OrderArticle>
         <AricleDiv>
-          <ClippedImage src="./Assets/mile2-aseets/pictures/form-banner.png" />
+          <ClippedImage src="https://i.hizliresim.com/42p3p5x.png" />
           <p style={{ margin: "44px 0" }}>
             Anasayfa -
             <span style={{ color: "#CE2829", fontWeight: "500" }}>

@@ -128,43 +128,73 @@ export default function Home({
       <article className="homeArticle">
         <p className="articleBtn">
           <img
-            style={{ paddingRight: "10px" }}
-            src="https://sc04.alicdn.com/kf/Hfb93651c72bc4f72a63fb6a5b8e6e141R.jpg"
+            style={{
+              marginRight: "10px",
+              width: "45px",
+              height: "45px",
+              borderRadius: "22.5px",
+            }}
+            src="https://m.media-amazon.com/images/I/51g7OTnw0GL._AC_UL960_QL65_.jpg"
           />
           YENİ! Kore
         </p>
         <p className="articleBtn">
           <img
-            style={{ paddingRight: "10px" }}
-            src="./Assets/mile2-aseets/icons/2.svg"
+            style={{
+              marginRight: "10px",
+              width: "45px",
+              height: "45px",
+              borderRadius: "22.5px",
+            }}
+            src="https://w7.pngwing.com/pngs/86/784/png-transparent-pizza-computer-icons-food-durian-pancake-food-rectangle-orange.png"
           />
           Pizza
         </p>
         <p className="articleBtn">
           <img
-            style={{ paddingRight: "10px" }}
-            src="./Assets/mile2-aseets/icons/3.svg"
+            style={{
+              marginRight: "10px",
+              width: "45px",
+              height: "45px",
+              borderRadius: "22.5px",
+            }}
+            src="https://assets.delirec.com/images%2Fki48ScwYWoTVjAwgMMJReZ8rQNA2%2Frecipe%2F9506c933-67ca-4936-ae59-36f347c66410-P%C3%A3o-de-hamb%C3%BArguer-blend-gallery-0"
           />
           Burger
         </p>
         <p className="articleBtn">
           <img
-            style={{ paddingRight: "10px" }}
-            src="./Assets/mile2-aseets/icons/4.svg"
+            style={{
+              marginRight: "10px",
+              width: "45px",
+              height: "45px",
+              borderRadius: "22.5px",
+            }}
+            src="https://www.shareicon.net/download/2016/08/18/808800_food_512x512.png"
           />
           Kızartmalar
         </p>
         <p className="articleBtn">
           <img
-            style={{ paddingRight: "10px" }}
-            src="./Assets/mile2-aseets/icons/5.svg"
+            style={{
+              marginRight: "10px",
+              width: "45px",
+              height: "45px",
+              borderRadius: "22.5px",
+            }}
+            src="https://cdn2.iconfinder.com/data/icons/food-and-drinks-flat-circle-shadow-vol-1/100/burger__fries__drink__food__hamburger__fastfood__coke-1024.png"
           />
           Fast food
         </p>
         <p className="articleBtn">
           <img
-            style={{ paddingRight: "10px" }}
-            src="./Assets/mile2-aseets/icons/6.svg"
+            style={{
+              marginRight: "10px",
+              width: "45px",
+              height: "45px",
+              borderRadius: "22.5px",
+            }}
+            src="https://cdn-icons-png.flaticon.com/512/2405/2405597.png"
           />
           Gazlı İçecek
         </p>
@@ -221,8 +251,13 @@ export default function Home({
           >
             <FoodBtnDiv>
               <img
-                style={{ paddingRight: "10px" }}
-                src="./Assets/mile2-aseets/icons/1.svg"
+                style={{
+                  marginRight: "10px",
+                  width: "45px",
+                  height: "45px",
+                  borderRadius: "22.5px",
+                }}
+                src="https://m.media-amazon.com/images/I/51g7OTnw0GL._AC_UL960_QL65_.jpg"
               />
               Ramen
             </FoodBtnDiv>
@@ -234,8 +269,13 @@ export default function Home({
           >
             <FoodBtnDiv>
               <img
-                style={{ paddingRight: "10px" }}
-                src="./Assets/mile2-aseets/icons/2.svg"
+                style={{
+                  marginRight: "10px",
+                  width: "45px",
+                  height: "45px",
+                  borderRadius: "22.5px",
+                }}
+                src="https://w7.pngwing.com/pngs/86/784/png-transparent-pizza-computer-icons-food-durian-pancake-food-rectangle-orange.png"
               />
               Pizza
             </FoodBtnDiv>
@@ -247,8 +287,13 @@ export default function Home({
           >
             <FoodBtnDiv>
               <img
-                style={{ paddingRight: "10px" }}
-                src="./Assets/mile2-aseets/icons/3.svg"
+                style={{
+                  marginRight: "10px",
+                  width: "45px",
+                  height: "45px",
+                  borderRadius: "22.5px",
+                }}
+                src="https://assets.delirec.com/images%2Fki48ScwYWoTVjAwgMMJReZ8rQNA2%2Frecipe%2F9506c933-67ca-4936-ae59-36f347c66410-P%C3%A3o-de-hamb%C3%BArguer-blend-gallery-0"
               />
               Burger
             </FoodBtnDiv>
@@ -260,8 +305,13 @@ export default function Home({
           >
             <FoodBtnDiv>
               <img
-                style={{ paddingRight: "10px" }}
-                src="./Assets/mile2-aseets/icons/4.svg"
+                style={{
+                  marginRight: "10px",
+                  width: "45px",
+                  height: "45px",
+                  borderRadius: "22.5px",
+                }}
+                src="https://www.shareicon.net/download/2016/08/18/808800_food_512x512.png"
               />
               French fries
             </FoodBtnDiv>
@@ -273,8 +323,13 @@ export default function Home({
           >
             <FoodBtnDiv>
               <img
-                style={{ paddingRight: "10px" }}
-                src="./Assets/mile2-aseets/icons/5.svg"
+                style={{
+                  marginRight: "10px",
+                  width: "45px",
+                  height: "45px",
+                  borderRadius: "22.5px",
+                }}
+                src="https://cdn2.iconfinder.com/data/icons/food-and-drinks-flat-circle-shadow-vol-1/100/burger__fries__drink__food__hamburger__fastfood__coke-1024.png"
               />
               Fast food
             </FoodBtnDiv>
@@ -286,8 +341,13 @@ export default function Home({
           >
             <FoodBtnDiv>
               <img
-                style={{ paddingRight: "10px" }}
-                src="./Assets/mile2-aseets/icons/6.svg"
+                style={{
+                  marginRight: "10px",
+                  width: "45px",
+                  height: "45px",
+                  borderRadius: "22.5px",
+                }}
+                src="https://cdn-icons-png.flaticon.com/512/2405/2405597.png"
               />
               Soft drinks
             </FoodBtnDiv>

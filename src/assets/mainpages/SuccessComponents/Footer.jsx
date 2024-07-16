@@ -86,7 +86,7 @@ export default function Footer() {
               <NavA href="#">
                 <img
                   style={{ marginRight: "10px" }}
-                  src="./Assets/mile2-aseets/footer/icons/icon-1.png"
+                  src="https://i.hizliresim.com/mlohs5f.png"
                 />
                 341 Londonderry Road,
                 <br /> Istanbul Türkiye
@@ -94,14 +94,14 @@ export default function Footer() {
               <NavA href="#">
                 <img
                   style={{ marginRight: "10px" }}
-                  src="./Assets/mile2-aseets/footer/icons/icon-2.png"
+                  src="https://i.hizliresim.com/5gobod6.png"
                 />
                 aciktim@teknolojikyemekler.com
               </NavA>
               <NavA href="#">
                 <img
                   style={{ marginRight: "10px" }}
-                  src="./Assets/mile2-aseets/footer/icons/icon-3.png"
+                  src="https://i.hizliresim.com/nexx0tg.png"
                 />
                 +90 216 123 45 67
               </NavA>
@@ -121,27 +121,27 @@ export default function Footer() {
           <H2 style={{ marginBottom: "40px" }}>Instagram</H2>
           <InstaDiv>
             <img
-              src="./Assets/mile2-aseets/footer/insta/li-0.png"
+              src="https://i.hizliresim.com/apikznn.png"
               style={{ scale: "0.9" }}
             />
             <img
-              src="./Assets/mile2-aseets/footer/insta/li-1.png"
+              src="https://i.hizliresim.com/l2l3aj8.png"
               style={{ scale: "0.9" }}
             />
             <img
-              src="./Assets/mile2-aseets/footer/insta/li-2.png"
+              src="https://i.hizliresim.com/1mrogyj.png"
               style={{ scale: "0.9" }}
             />
             <img
-              src="./Assets/mile2-aseets/footer/insta/li-3.png"
+              src="https://i.hizliresim.com/gyhsxo5.png"
               style={{ scale: "0.9" }}
             />
             <img
-              src="./Assets/mile2-aseets/footer/insta/li-4.png"
+              src="https://resmim.net/cdn/2024/07/16/WHShQb.png"
               style={{ scale: "0.9" }}
             />
             <img
-              src="./Assets/mile2-aseets/footer/insta/li-5.png"
+              src="https://resmim.net/cdn/2024/07/16/WHSAzZ.png"
               style={{ scale: "0.9" }}
             />
           </InstaDiv>
