@@ -29,6 +29,10 @@ const FoodButon = styled.button`
     background-color: black;
     color: white;
   }
+
+  @media (max-width: 1000px) {
+    transform: scale(0.8);
+  }
 `;
 
 const FoodBtnDiv = styled.div`
@@ -37,7 +41,7 @@ const FoodBtnDiv = styled.div`
   align-items: center;
 
   @media (max-width: 1000px) {
-    transform: scale(0.7);
+    transform: scale(0.9);
   }
 `;
 

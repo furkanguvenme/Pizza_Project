@@ -256,7 +256,7 @@ export default function Order({
           extraCost = 1;
         }
 
-        setSecim((prevSecim) => prevSecim - prevCost + extraCost);
+        setSecim((prevSecim) => prevSecim - prevCst + extraCost);
         setHesap(
           (prevHesap) =>
             prevHesap - siparis.piece * prevCost + siparis.piece * extraCost
@@ -371,7 +371,6 @@ export default function Order({
         console.error("Hata oluştu:", error);
       });
   }
-
   return (
     <>
       <OrderHeader>

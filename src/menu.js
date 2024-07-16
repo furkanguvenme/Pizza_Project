@@ -74,7 +74,7 @@ export const menu = [
           { ingredient: "Mushrooms", cost: 2 },
           { ingredient: "Nori (Seaweed)", cost: 1 },
           { ingredient: "Sesame Seeds", cost: 0.5 },
-          { ingredient: "Kikurage (Wood Ear Mushrooms)", cost: 1 },
+          { ingredient: "Kikurage ", cost: 1 },
           { ingredient: "Fish Cake (Naruto)", cost: 1 },
           { ingredient: "Soy Sauce", cost: 1 },
           { ingredient: "Sesame Oil", cost: 0.5 },

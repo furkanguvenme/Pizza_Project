@@ -19,11 +19,12 @@ function App() {
     note: "",
     userName: "",
     userPhone: "",
-  });
+  });                                                         
   const [selectedButton, setSelectedButton] = useState(
     menuItems.find((item) => item.name === "Ramen").types
   );
   const [clicked, setClicked] = useState("");
+  console.log(siparis);
   return (
     <Switch>
       <Route path="/" exact>
