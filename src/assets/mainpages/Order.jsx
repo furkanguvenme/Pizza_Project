@@ -256,7 +256,7 @@ export default function Order({
           extraCost = 1;
         }
 
-        setSecim((prevSecim) => prevSecim - prevCst + extraCost);
+        setSecim((prevSecim) => prevSecim - prevCost + extraCost);
         setHesap(
           (prevHesap) =>
             prevHesap - siparis.piece * prevCost + siparis.piece * extraCost
@@ -371,6 +371,7 @@ export default function Order({
         console.error("Hata oluştu:", error);
       });
   }
+
   return (
     <>
       <OrderHeader>
@@ -378,7 +379,7 @@ export default function Order({
       </OrderHeader>
       <OrderArticle>
         <AricleDiv>
-          <ClippedImage src="https://i.hizliresim.com/42p3p5x.png" />
+          <ClippedImage src="./Assets/mile2-aseets/pictures/form-banner.png" />
           <p style={{ margin: "44px 0" }}>
             Anasayfa -
             <span style={{ color: "#CE2829", fontWeight: "500" }}>
