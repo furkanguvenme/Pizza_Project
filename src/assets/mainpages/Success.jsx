@@ -67,7 +67,10 @@ const Price = styled.div`
 export default function Success(order) {
   return (
     <SuccessDiv>
-      <img style={{ marginTop: "56px" }} src="./Assets/mile1-assets/logo.svg" />
+      <img
+        style={{ marginTop: "56px" }}
+        src="https://i.hizliresim.com/izj9h9o.png"
+      />
       <LezzetP>lezzetin yolda</LezzetP>
       <SiparisAlındı>SİPARİŞ ALINDI</SiparisAlındı>
       <hr

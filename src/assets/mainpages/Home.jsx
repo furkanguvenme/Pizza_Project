@@ -113,7 +113,7 @@ export default function Home({
     <>
       <header className="homeHeader">
         <div className="homeHeaderDiv">
-          <img src="./Assets/mile1-assets/logo.svg" />
+          <img src="https://i.hizliresim.com/izj9h9o.png" />
           <p className="firsat">fırsatı kaçırma</p>
           <p className="aclik">KOD ACIKTIRIR</p>
           <p className="aclik">PIZZA, DOYURUR</p>

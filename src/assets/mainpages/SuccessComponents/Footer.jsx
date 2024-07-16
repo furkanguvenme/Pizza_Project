@@ -79,7 +79,7 @@ export default function Footer() {
               {" "}
               <img
                 style={{ marginTop: "-44px" }}
-                src="./Assets/mile2-aseets/footer/logo-footer.svg"
+                src="https://i.hizliresim.com/izj9h9o.png"
               />
             </div>
             <FooterNav>

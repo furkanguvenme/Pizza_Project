@@ -375,7 +375,7 @@ export default function Order({
   return (
     <>
       <OrderHeader>
-        <img src="./Assets/mile1-assets/logo.svg" />
+        <img src="https://i.hizliresim.com/izj9h9o.png" />
       </OrderHeader>
       <OrderArticle>
         <AricleDiv>
