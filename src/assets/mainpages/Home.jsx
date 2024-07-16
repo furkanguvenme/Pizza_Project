@@ -129,7 +129,7 @@ export default function Home({
         <p className="articleBtn">
           <img
             style={{ paddingRight: "10px" }}
-            src="./Assets/mile2-aseets/icons/1.svg"
+            src="https://sc04.alicdn.com/kf/Hfb93651c72bc4f72a63fb6a5b8e6e141R.jpg"
           />
           YENİ! Kore
         </p>
